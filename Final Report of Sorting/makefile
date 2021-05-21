@@ -5,7 +5,7 @@ CFLAGS = -c
 # -O2 option is for optimized version
 OPTFLAGS = -O2
 
-all	: bin/Sorting bin/DataGenerate
+all	: bin/Sorting bin/ComplexDataGenerate bin/NormalDataGenerate
 	@echo -n ""
 
 bin/Sorting	: Sorting_tool.o main.o
@@ -16,12 +16,17 @@ Sorting_tool.o	: src/Sorting_tool.cpp src/Sorting_tool.h
 			$(CC) $(CFLAGS) $(OPTFLAGS) $< -o $@
 
 
-bin/DataGenerate : DataGenerate.o	
-				   $(CC) $(OPTFLAGS) DataGenerate.o -o bin/DataGenerate		
-DataGenerate.o	: src/DataGenerate.cpp
+bin/ComplexDataGenerate : ComplexDataGenerate.o	
+				   $(CC) $(OPTFLAGS) ComplexDataGenerate.o -o bin/ComplexDataGenerate		
+ComplexDataGenerate.o	: src/ComplexDataGenerate.cpp
+				  $(CC) $(CFLAGS) $(OPTFLAGS) $< -o $@
+
+bin/NormalDataGenerate : NormalDataGenerate.o	
+				   $(CC) $(OPTFLAGS) NormalDataGenerate.o -o bin/NormalDataGenerate		
+NormalDataGenerate.o	: src/NormalDataGenerate.cpp
 				  $(CC) $(CFLAGS) $(OPTFLAGS) $< -o $@
 
 # clean all the .o and executable files
 clean:
-		rm -rf *.o bin/*
+		rm -rf *.o bin/ComplexDataGenerate bin/Sorting bin/NormalDataGenerate
 
