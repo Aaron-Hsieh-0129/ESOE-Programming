@@ -21,6 +21,8 @@ class SortingTool {
         static int         compareID(const void * a, const void * b);
         static int         compareFirstName(const void * a, const void * b);
         static int         compareLastName(const void * a, const void * b);
+        static int         compareInt(const void * a, const void * b);
+        static int         compareDouble(const void * a, const void * b);
 };
 
 #endif

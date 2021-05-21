@@ -93,3 +93,18 @@ int SortingTool::compareLastName(const void * a, const void * b){
 	string B = pb->lastName;
 	return strcmp(A.c_str(), B.c_str());
 }
+
+int SortingTool::compareInt(const void * a, const void * b) {
+	if ( *(int*)a <  *(int*)b ) return -1;
+	if ( *(int*)a == *(int*)b ) return 0;
+	if ( *(int*)a >  *(int*)b ) return 1;
+	return -999;
+}
+
+int SortingTool::compareDouble(const void * a, const void * b) {
+	if ( *(double*)a <  *(double*)b ) return -1;
+	if ( *(double*)a == *(double*)b ) return 0;
+	if ( *(double*)a >  *(double*)b ) return 1;
+	return -999;
+}
+
