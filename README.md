@@ -7,10 +7,10 @@ Homework of ESOE programming class
 -----------   
 
 ### bin/Sorting 執行方式（推薦直接執行bin/底下的shell script）
-##### usage1 (Self-Defined Data): *./Sorting -[Score|ID|FirstName|LastName] -[SS|IS|BS] -[random|increasing|decreasing|semi] <size> <output_file>*  
+##### usage1 (Self-Defined Data): *./Sorting -[Score|ID|FirstName|LastName] -[SS|IS|BS|HS] -[random|increasing|decreasing|semi] <size> <output_file>*  
 ##### Ex1: *./Sorting -Score -SS -random 1000 ../outputs/output.txt*  
 
-##### usage2 (Normal Data): *./Sorting -[SS|IS|BS] <input_file> <output_fule>*  
+##### usage2 (Normal Data): *./Sorting -[SS|IS|BS|HS] <input_file> <output_fule>*  
 ##### Ex2: *./Sorting -SS ../generated_data/data_normal_generated/10_int_random.txt ../outputs/10_int_random.txt*  
   
 -----------   
