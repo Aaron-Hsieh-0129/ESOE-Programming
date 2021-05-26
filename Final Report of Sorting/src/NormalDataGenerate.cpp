@@ -4,10 +4,11 @@
 #include <vector>
 #include <random>
 #include <cstring>
+#include <algorithm>
 
 using namespace std;
 void help_message(){
-	cout << "./NormalDataGenerate <data number> <output>" << endl;
+	cout << "usage: ./NormalDataGenerate <data number> <output>" << endl;
 	cout << "Ex: ./NormalDataGenerate 1000 ../generated_data/data_normal_generated/1000" << endl;
 	
 }

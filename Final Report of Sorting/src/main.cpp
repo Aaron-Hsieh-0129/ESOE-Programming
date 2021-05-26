@@ -5,15 +5,16 @@
 #include <vector>
 #include <cstring>
 #include <random>
+#include <iomanip>
 #include "Sorting_tool.h"
 
 using namespace std;
 
 
 void help_message(){
-	cout << "usage1 (Self-Defined Data): ./Sorting -[Score|ID|FirstName|LastName] -[SS|IS|BS] -[random|increasing|decreasing|semi] <size> <output_file>" << endl;
+	cout << "usage1 (Self-Defined Data): ./Sorting -[Score|ID|FirstName|LastName] -[SS|IS|BS|HS|QS] -[random|increasing|decreasing|semi] <size> <output_file>" << endl;
 	cout << "Ex1: ./Sorting -Score -SS -random 1000 ../outputs/output.txt" << endl;
-	cout << "usage2 (Normal Data): ./Sorting -[SS|IS|BS] <input_file> <output_fule>" << endl;
+	cout << "usage2 (Normal Data): ./Sorting -[SS|IS|BS|HS|QS] <input_file> <output_fule>" << endl;
 	cout << "Ex2: ./Sorting -SS ../generated_data/data_normal_generated/10_int_random.txt ../outputs/10_int_random.txt" << endl;
 }
 
@@ -236,23 +237,31 @@ int main(int argc, char* argv[]) {
 
 		if(!strcmp(argv[1],"-Score")){
 			if (!strcmp(argv[2],"-SS")) SortingTool.selectionsort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareScore);
-			else if (!strcmp(argv[2],"-IS")) SortingTool.insertionsort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareScore);
-			else if (!strcmp(argv[2],"-BS")) SortingTool.bubblesort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareScore);
+			else if (!strcmp(argv[2], "-IS")) SortingTool.insertionsort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareScore);
+			else if (!strcmp(argv[2], "-BS")) SortingTool.bubblesort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareScore);
+			else if (!strcmp(argv[2], "-HS")) SortingTool.heapsort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareScore);
+			else if (!strcmp(argv[2], "-QS")) SortingTool.quicksort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareScore);
 	    }
 	    else if(!strcmp(argv[1],"-ID")){
 	        if (!strcmp(argv[2],"-SS")) SortingTool.selectionsort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareID);
-			else if (!strcmp(argv[2],"-IS")) SortingTool.insertionsort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareID);
-			else if (!strcmp(argv[2],"-BS")) SortingTool.bubblesort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareID);
+			else if (!strcmp(argv[2], "-IS")) SortingTool.insertionsort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareID);
+			else if (!strcmp(argv[2], "-BS")) SortingTool.bubblesort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareID);
+			else if (!strcmp(argv[2], "-HS")) SortingTool.heapsort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareID);
+			else if (!strcmp(argv[2], "-QS")) SortingTool.quicksort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareID);
 	    }
 	    else if(!strcmp(argv[1], "-FirstName")){
 	    	if (!strcmp(argv[2],"-SS")) SortingTool.selectionsort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareFirstName);
-			else if (!strcmp(argv[2],"-IS")) SortingTool.insertionsort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareFirstName);
-			else if (!strcmp(argv[2],"-BS")) SortingTool.bubblesort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareFirstName);
+			else if (!strcmp(argv[2], "-IS")) SortingTool.insertionsort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareFirstName);
+			else if (!strcmp(argv[2], "-BS")) SortingTool.bubblesort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareFirstName);
+			else if (!strcmp(argv[2], "-HS")) SortingTool.heapsort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareFirstName);
+			else if (!strcmp(argv[2], "-QS")) SortingTool.quicksort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareFirstName);
 	    }
 	    else if(!strcmp(argv[1],"-LastName")){
 	        if (!strcmp(argv[2],"-SS")) SortingTool.selectionsort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareLastName);
-			else if (!strcmp(argv[2],"-IS")) SortingTool.insertionsort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareLastName);
-			else if (!strcmp(argv[2],"-BS")) SortingTool.bubblesort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareLastName);
+			else if (!strcmp(argv[2], "-IS")) SortingTool.insertionsort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareLastName);
+			else if (!strcmp(argv[2], "-BS")) SortingTool.bubblesort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareLastName);
+			else if (!strcmp(argv[2], "-HS")) SortingTool.heapsort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareLastName);
+			else if (!strcmp(argv[2], "-QS")) SortingTool.quicksort(Class.data(), Class.size(), sizeof(Student), SortingTool.compareLastName);
 	    }
 	    else {
 	        help_message();
@@ -293,9 +302,11 @@ int main(int argc, char* argv[]) {
 			START = clock();
 			// sort
 			SortingTool SortingTool; // Constructor
-			if (!strcmp(argv[1],"-SS")) SortingTool.selectionsort(Data.data(), Data.size(), sizeof(int), SortingTool.compareInt);
-			else if (!strcmp(argv[1],"-IS")) SortingTool.insertionsort(Data.data(), Data.size(), sizeof(int), SortingTool.compareInt);
-			else if (!strcmp(argv[1],"-BS")) SortingTool.bubblesort(Data.data(), Data.size(), sizeof(int), SortingTool.compareInt);
+			if (!strcmp(argv[1], "-SS")) SortingTool.selectionsort(Data.data(), Data.size(), sizeof(int), SortingTool.compareInt);
+			else if (!strcmp(argv[1], "-IS")) SortingTool.insertionsort(Data.data(), Data.size(), sizeof(int), SortingTool.compareInt);
+			else if (!strcmp(argv[1], "-BS")) SortingTool.bubblesort(Data.data(), Data.size(), sizeof(int), SortingTool.compareInt);
+			else if (!strcmp(argv[1], "-HS")) SortingTool.heapsort(Data.data(), Data.size(), sizeof(int), SortingTool.compareInt);
+			else if (!strcmp(argv[1], "-QS")) SortingTool.quicksort(Data.data(), Data.size(), sizeof(int), SortingTool.compareInt);
 
 			END = clock();
 	    	cout <<"The total CPU time: " << (END - START) << " ms" << endl;
@@ -318,9 +329,11 @@ int main(int argc, char* argv[]) {
 			START = clock();
 			// sort
 			SortingTool SortingTool; // Constructor
-			if (!strcmp(argv[1],"-SS")) SortingTool.selectionsort(Data.data(), Data.size(), sizeof(double), SortingTool.compareDouble);
-			else if (!strcmp(argv[1],"-IS")) SortingTool.insertionsort(Data.data(), Data.size(), sizeof(double), SortingTool.compareDouble);
-			else if (!strcmp(argv[1],"-BS")) SortingTool.bubblesort(Data.data(), Data.size(), sizeof(double), SortingTool.compareDouble);
+			if (!strcmp(argv[1], "-SS")) SortingTool.selectionsort(Data.data(), Data.size(), sizeof(double), SortingTool.compareDouble);
+			else if (!strcmp(argv[1], "-IS")) SortingTool.insertionsort(Data.data(), Data.size(), sizeof(double), SortingTool.compareDouble);
+			else if (!strcmp(argv[1], "-BS")) SortingTool.bubblesort(Data.data(), Data.size(), sizeof(double), SortingTool.compareDouble);
+			else if (!strcmp(argv[1], "-HS")) SortingTool.heapsort(Data.data(), Data.size(), sizeof(double), SortingTool.compareDouble);
+			else if (!strcmp(argv[1], "-QS")) SortingTool.quicksort(Data.data(), Data.size(), sizeof(double), SortingTool.compareDouble);
 
 			END = clock();
 	    	cout <<"The total CPU time: " << (END - START) << " ms" << endl;
