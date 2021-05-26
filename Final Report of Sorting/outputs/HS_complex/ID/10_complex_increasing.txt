@@ -1,0 +1,11 @@
+     ID      FirstName          LastName     Score
+  612556         Abraham         Brianne         6
+  761926         Maurice           Damia         8
+ 1778439          Mendie           Eyram        13
+ 2384665           Ricky            Issa        14
+ 3334714            Rodd        Jeanette        30
+ 4943591           Shell            Mina        38
+ 7617785         Spencer         Mishael        39
+ 8373014          Thaine           Naoki        56
+ 9439784         Wilburt          Tyeson        66
+ 9790899          Yehudi          Varick        93
