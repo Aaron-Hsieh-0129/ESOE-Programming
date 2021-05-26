@@ -64,97 +64,154 @@ t_BS_complex_firstname = np.array([[14, 150, 10893, 1.13653e6, 1.02553e8], [12, 
 t_BS_complex_ID = np.array([[22, 61, 4468, 442764, 5.45434e7], [12, 21, 909, 83051, 1.37438e7], 
 							[12, 78, 6950, 590514, 6.8553e7], [15, 56, 1677, 161558, 2.15969e7]])
 
+t_HS_int = np.array([[27, 97, 1699, 20075, 291515], [33, 106, 2324, 31416, 342507], 
+					 [21, 153, 2106, 25792, 309319], [35, 102, 1345, 23191, 249108]])
 
+t_HS_real = np.array([[25, 123, 1278, 19348, 234286], [23, 118, 1410, 20352, 240800], 
+					  [20, 95, 1179, 19383, 224586], [22, 154, 1345, 25688, 244492]])
+
+t_HS_complex_firstname = np.array([[24, 108, 1574, 24496, 298772], [36, 208, 2677, 33810, 392693], 
+								   [28, 155, 2098, 30987, 267920], [25, 199, 2599, 30855, 269409]])
+
+t_HS_complex_ID = np.array([[32, 142, 1807, 28980, 240889], [28, 156, 2134, 30386, 375888], 
+							[31, 146, 1770, 24040, 242120], [20, 154, 1698, 26760, 256647]])
+
+
+t_QS_int = np.array([[0, 0, 0, 10000, 50000], [0, 0, 10000, 770000, 5.516e7], 
+					 [0, 0, 10000, 550000, 3.552e7], [0, 0, 0, 10000, 50000]])
+
+t_QS_real = np.array([[0, 0, 0, 0, 20000], [0, 0, 10000, 800000, 5.528e7], 
+					  [0, 0, 10000, 530000, 3.331e7], [0, 0, 0, 10000, 50000]])
+
+t_QS_complex_firstname = np.array([[0, 0, 0, 10000, 130000], [0, 0, 10000, 1.5e6, 1.3169e8], 
+								   [0, 0, 20000, 520000, 3.416e7], [0, 0, 0, 10000, 170000]])
+
+t_QS_complex_ID = np.array([[0, 0, 0, 0, 30000], [0, 0, 20000, 520000, 3.416e7], 
+							[0, 0, 10000, 430000, 3.185e7], [0, 0, 0, 0, 60000]])
 
 # constructor
 # int
 SS_int_random = PlotMethod2D(input_size, t_SS_int[0])
 IS_int_random = PlotMethod2D(input_size, t_IS_int[0])
 BS_int_random = PlotMethod2D(input_size, t_BS_int[0])
+HS_int_random = PlotMethod2D(input_size, t_HS_int[0])
+QS_int_random = PlotMethod2D(input_size, t_QS_int[0])
 
 SS_int_increasing = PlotMethod2D(input_size, t_SS_int[1])
 IS_int_increasing = PlotMethod2D(input_size, t_IS_int[1])
 BS_int_increasing = PlotMethod2D(input_size, t_BS_int[1])
+HS_int_increasing = PlotMethod2D(input_size, t_HS_int[1])
+QS_int_increasing = PlotMethod2D(input_size, t_QS_int[1])
 
 SS_int_decreasing = PlotMethod2D(input_size, t_SS_int[2])
 IS_int_decreasing = PlotMethod2D(input_size, t_IS_int[2])
 BS_int_decreasing = PlotMethod2D(input_size, t_BS_int[2])
+HS_int_decreasing = PlotMethod2D(input_size, t_HS_int[2])
+QS_int_decreasing = PlotMethod2D(input_size, t_QS_int[2])
 
 SS_int_semi = PlotMethod2D(input_size, t_SS_int[3])
 IS_int_semi = PlotMethod2D(input_size, t_IS_int[3])
 BS_int_semi = PlotMethod2D(input_size, t_BS_int[3])
+HS_int_semi = PlotMethod2D(input_size, t_HS_int[3])
+QS_int_semi = PlotMethod2D(input_size, t_QS_int[3])
 
 # real
 SS_real_random = PlotMethod2D(input_size, t_SS_real[0])
 IS_real_random = PlotMethod2D(input_size, t_IS_real[0])
 BS_real_random = PlotMethod2D(input_size, t_BS_real[0])
+HS_real_random = PlotMethod2D(input_size, t_HS_real[0])
+QS_real_random = PlotMethod2D(input_size, t_QS_real[0])
 
 SS_real_increasing = PlotMethod2D(input_size, t_SS_real[1])
 IS_real_increasing = PlotMethod2D(input_size, t_IS_real[1])
 BS_real_increasing = PlotMethod2D(input_size, t_BS_real[1])
+HS_real_increasing = PlotMethod2D(input_size, t_HS_real[1])
+QS_real_increasing = PlotMethod2D(input_size, t_QS_real[1])
 
 SS_real_decreasing = PlotMethod2D(input_size, t_SS_real[2])
 IS_real_decreasing = PlotMethod2D(input_size, t_IS_real[2])
 BS_real_decreasing = PlotMethod2D(input_size, t_BS_real[2])
+HS_real_decreasing = PlotMethod2D(input_size, t_HS_real[2])
+QS_real_decreasing = PlotMethod2D(input_size, t_QS_real[2])
 
 SS_real_semi = PlotMethod2D(input_size, t_SS_real[3])
 IS_real_semi = PlotMethod2D(input_size, t_IS_real[3])
 BS_real_smei = PlotMethod2D(input_size, t_BS_real[3])
+HS_real_smei = PlotMethod2D(input_size, t_HS_real[3])
+QS_real_smei = PlotMethod2D(input_size, t_QS_real[3])
 
 # complex firstname
 SS_complex_firstname_random = PlotMethod2D(input_size, t_SS_complex_firstname[0])
 IS_complex_firstname_random = PlotMethod2D(input_size, t_IS_complex_firstname[0])
 BS_complex_firstname_random = PlotMethod2D(input_size, t_BS_complex_firstname[0])
+HS_complex_firstname_random = PlotMethod2D(input_size, t_HS_complex_firstname[0])
+QS_complex_firstname_random = PlotMethod2D(input_size, t_QS_complex_firstname[0])
 
 SS_complex_firstname_increasing = PlotMethod2D(input_size, t_SS_complex_firstname[1])
 IS_complex_firstname_increasing = PlotMethod2D(input_size, t_IS_complex_firstname[1])
 BS_complex_firstname_increasing = PlotMethod2D(input_size, t_BS_complex_firstname[1])
+HS_complex_firstname_increasing = PlotMethod2D(input_size, t_HS_complex_firstname[1])
+QS_complex_firstname_increasing = PlotMethod2D(input_size, t_QS_complex_firstname[1])
 
 SS_complex_firstname_decreasing = PlotMethod2D(input_size, t_SS_complex_firstname[2])
 IS_complex_firstname_decreasing = PlotMethod2D(input_size, t_IS_complex_firstname[2])
 BS_complex_firstname_decreasing = PlotMethod2D(input_size, t_BS_complex_firstname[2])
+HS_complex_firstname_decreasing = PlotMethod2D(input_size, t_HS_complex_firstname[2])
+QS_complex_firstname_decreasing = PlotMethod2D(input_size, t_QS_complex_firstname[2])
 
 SS_complex_firstname_semi = PlotMethod2D(input_size, t_SS_complex_firstname[3])
 IS_complex_firstname_semi = PlotMethod2D(input_size, t_IS_complex_firstname[3])
 BS_complex_firstname_smei = PlotMethod2D(input_size, t_BS_complex_firstname[3])
+HS_complex_firstname_smei = PlotMethod2D(input_size, t_HS_complex_firstname[3])
+QS_complex_firstname_smei = PlotMethod2D(input_size, t_QS_complex_firstname[3])
 
 
 # complex ID
 SS_complex_ID_random = PlotMethod2D(input_size, t_SS_complex_ID[0])
 IS_complex_ID_random = PlotMethod2D(input_size, t_IS_complex_ID[0])
 BS_complex_ID_random = PlotMethod2D(input_size, t_BS_complex_ID[0])
+HS_complex_ID_random = PlotMethod2D(input_size, t_HS_complex_ID[0])
+QS_complex_ID_random = PlotMethod2D(input_size, t_QS_complex_ID[0])
 
 SS_complex_ID_increasing = PlotMethod2D(input_size, t_SS_complex_ID[1])
 IS_complex_ID_increasing = PlotMethod2D(input_size, t_IS_complex_ID[1])
 BS_complex_ID_increasing = PlotMethod2D(input_size, t_BS_complex_ID[1])
+HS_complex_ID_increasing = PlotMethod2D(input_size, t_HS_complex_ID[1])
+QS_complex_ID_increasing = PlotMethod2D(input_size, t_QS_complex_ID[1])
 
 SS_complex_ID_decreasing = PlotMethod2D(input_size, t_SS_complex_ID[2])
 IS_complex_ID_decreasing = PlotMethod2D(input_size, t_IS_complex_ID[2])
 BS_complex_ID_decreasing = PlotMethod2D(input_size, t_BS_complex_ID[2])
+HS_complex_ID_decreasing = PlotMethod2D(input_size, t_HS_complex_ID[2])
+QS_complex_ID_decreasing = PlotMethod2D(input_size, t_QS_complex_ID[2])
 
 SS_complex_ID_semi = PlotMethod2D(input_size, t_SS_complex_ID[3])
 IS_complex_ID_semi = PlotMethod2D(input_size, t_IS_complex_ID[3])
 BS_complex_ID_smei = PlotMethod2D(input_size, t_BS_complex_ID[3])
+HS_complex_ID_smei = PlotMethod2D(input_size, t_HS_complex_ID[3])
+QS_complex_ID_smei = PlotMethod2D(input_size, t_QS_complex_ID[3])
 
 
 
 # plot Input Size v.s. Execution Time (random int)
-SS_int_random.plot2D(show=False, xscale="log", yscale="log")
+SS_int_random.plot2D(show=False, xscale="log", yscale="log", figsize=(10, 8))
 IS_int_random.plot2D(canvas=False, show=False, xscale="log", yscale="log")
+HS_int_random.plot2D(canvas=False, show=False, xscale="log", yscale="log")
+# QS_int_random.plot2D(canvas=False, show=False, xscale="log", yscale="log")
 BS_int_random.plot2D(title="Input Size v.s. Execution time (Random Ordered Int)", xlabel="Size (log scale)", ylabel="Time [$\mu$s] (log scale)", 
-			  		 show=True, legend=["SS_int", "IS_int", "BS_int"], xscale="log", yscale="log", canvas=False, savename="Input Size v.s. Execution time (Random Ordered Int).png")
+			  		 show=True, legend=["SS_int", "IS_int", "HS_int", "QS_int", "BS_int"], xscale="log", yscale="log", canvas=False, savename="Input Size v.s. Execution time (Random Ordered Int).png")
 
 
 # plot Input Order v.s. Execution Time (int)
 # SS
-SS_int_random.plot2D(show=False, xscale="log", yscale="log")
+SS_int_random.plot2D(show=False, xscale="log", yscale="log", figsize=(10, 8))
 SS_int_increasing.plot2D(canvas=False, show=False, xscale="log", yscale="log")
 SS_int_decreasing.plot2D(canvas=False, show=False, xscale="log", yscale="log")
 SS_int_semi.plot2D(title="Input Order v.s. Execution time (Selection Sort, Int)", xlabel="Size (log scale)", ylabel="Time [$\mu$s] (log scale)", 
 			  	   show=True, legend=["Random", "Increasing", "Decreasing", "Semi"], xscale="log", yscale="log", canvas=False, savename="Input Order v.s. Execution time (Selection Sort, Int).png")
 
 # IS
-IS_int_random.plot2D(show=False, xscale="log", yscale="log")
+IS_int_random.plot2D(show=False, xscale="log", yscale="log", figsize=(10, 8))
 IS_int_increasing.plot2D(canvas=False, show=False, xscale="log", yscale="log")
 IS_int_decreasing.plot2D(canvas=False, show=False, xscale="log", yscale="log")
 IS_int_semi.plot2D(title="Input Order v.s. Execution time (Insertion Sort, Int)", xlabel="Size (log scale)", ylabel="Time [$\mu$s] (log scale)", 
@@ -162,38 +219,61 @@ IS_int_semi.plot2D(title="Input Order v.s. Execution time (Insertion Sort, Int)"
 
 
 # BS
-BS_int_random.plot2D(show=False, xscale="log", yscale="log")
+BS_int_random.plot2D(show=False, xscale="log", yscale="log", figsize=(10, 8))
 BS_int_increasing.plot2D(canvas=False, show=False, xscale="log", yscale="log")
 BS_int_decreasing.plot2D(canvas=False, show=False, xscale="log", yscale="log")
 BS_int_semi.plot2D(title="Input Order v.s. Execution time (Bubble Sort, Int)", xlabel="Size (log scale)", ylabel="Time [$\mu$s] (log scale)", 
 			  	   show=True, legend=["Random", "Increasing", "Decreasing", "Semi"], xscale="log", yscale="log", canvas=False, savename="Input Order v.s. Execution time (Bubble Sort, Int).png")
 
+# HS
+HS_int_random.plot2D(show=False, xscale="log", yscale="log", figsize=(10, 8))
+HS_int_increasing.plot2D(canvas=False, show=False, xscale="log", yscale="log")
+HS_int_decreasing.plot2D(canvas=False, show=False, xscale="log", yscale="log")
+HS_int_semi.plot2D(title="Input Order v.s. Execution time (Heap Sort, Int)", xlabel="Size (log scale)", ylabel="Time [$\mu$s] (log scale)", 
+			  	   show=True, legend=["Random", "Increasing", "Decreasing", "Semi"], xscale="log", yscale="log", canvas=False, savename="Input Order v.s. Execution time (Heap Sort, Int).png")
+
+# QS
+# QS_int_random.plot2D(show=False, xscale="log", yscale="log", figsize=(10, 8))
+# QS_int_increasing.plot2D(canvas=False, show=False, xscale="log", yscale="log")
+# QS_int_decreasing.plot2D(canvas=False, show=False, xscale="log", yscale="log")
+# QS_int_semi.plot2D(title="Input Order v.s. Execution time (Quick Sort, Int)", xlabel="Size (log scale)", ylabel="Time [$\mu$s] (log scale)", 
+# 			  	   show=True, legend=["Random", "Increasing", "Decreasing", "Semi"], xscale="log", yscale="log", canvas=False, savename="Input Order v.s. Execution time (Quick Sort, Int).png")
+
 
 # plot Size of Value Set v.s. Execution Time (random)
 # SS
-SS_int_random.plot2D(show=False, xscale="log", yscale="log")
+SS_int_random.plot2D(show=False, xscale="log", yscale="log", figsize=(10, 8))
 SS_real_random.plot2D(canvas=False, show=False, xscale="log", yscale="log")
 SS_complex_firstname_random.plot2D(title="Size of Value Set v.s. Execution time (Selection Sort, Int)", xlabel="Size (log scale)", ylabel="Time [$\mu$s] (log scale)", 
 			  	   show=True, legend=["Int", "real", "self-defined (including 4 attributes)\n [sorted by string]"], xscale="log", yscale="log", canvas=False, savename="Size of Value Set v.s. Execution time (Selection Sort, Int).png")
 
 
 # IS
-IS_int_random.plot2D(show=False, xscale="log", yscale="log")
+IS_int_random.plot2D(show=False, xscale="log", yscale="log", figsize=(10, 8))
 IS_real_random.plot2D(canvas=False, show=False, xscale="log", yscale="log")
 IS_complex_firstname_random.plot2D(title="Size of Value Set v.s. Execution time (Insertion Sort, Int)", xlabel="Size (log scale)", ylabel="Time [$\mu$s] (log scale)", 
 			  	   show=True, legend=["Int", "real", "self-defined (including 4 attributes)\n [sorted by string]"], xscale="log", yscale="log", canvas=False, savename="Size of Value Set v.s. Execution time (Insertion Sort, Int).png")
 
 
 # BS
-BS_int_random.plot2D(show=False, xscale="log", yscale="log")
+BS_int_random.plot2D(show=False, xscale="log", yscale="log", figsize=(10, 8))
 BS_real_random.plot2D(canvas=False, show=False, xscale="log", yscale="log")
 BS_complex_firstname_random.plot2D(title="Size of Value Set v.s. Execution time (Bubble Sort, Int)", xlabel="Size (log scale)", ylabel="Time [$\mu$s] (log scale)", 
 			  	   show=True, legend=["Int", "real", "self-defined (including 4 attributes)\n [sorted by string]"], xscale="log", yscale="log", canvas=False, savename="Size of Value Set v.s. Execution time (Bubble Sort, Int).png")
 
 
+# HS
+HS_int_random.plot2D(show=False, xscale="log", yscale="log", figsize=(10, 8))
+HS_real_random.plot2D(canvas=False, show=False, xscale="log", yscale="log")
+HS_complex_firstname_random.plot2D(title="Size of Value Set v.s. Execution time (Heap Sort, Int)", xlabel="Size (log scale)", ylabel="Time [$\mu$s] (log scale)", 
+			  	   show=True, legend=["Int", "real", "self-defined (including 4 attributes)\n [sorted by string]"], xscale="log", yscale="log", canvas=False, savename="Size of Value Set v.s. Execution time (Heap Sort, Int).png")
 
 
-
+# QS
+# QS_int_random.plot2D(show=False, xscale="log", yscale="log", figsize=(10, 8))
+# QS_real_random.plot2D(canvas=False, show=False, xscale="log", yscale="log")
+# QS_complex_firstname_random.plot2D(title="Size of Value Set v.s. Execution time (Quick Sort, Int)", xlabel="Size (log scale)", ylabel="Time [$\mu$s] (log scale)", 
+# 			  	   show=True, legend=["Int", "real", "self-defined (including 4 attributes)\n [sorted by string]"], xscale="log", yscale="log", canvas=False, savename="Size of Value Set v.s. Execution time (Quick Sort, Int).png")
 
 
 
