@@ -10,6 +10,7 @@ typedef struct{
         size_t score;
 }Student;
 
+
 class SortingTool {
     public:
                     SortingTool(); // constructor

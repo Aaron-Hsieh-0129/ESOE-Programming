@@ -4,6 +4,7 @@
 #include <cstring>
 #include <vector>
 #include <fstream>
+#include <vector>
 
 int heapSize;
 
@@ -195,4 +196,3 @@ int SortingTool::compareDouble(const void * a, const void * b) {
 	if ( *(double*)a >  *(double*)b ) return 1;
 	return -999;
 }
-
