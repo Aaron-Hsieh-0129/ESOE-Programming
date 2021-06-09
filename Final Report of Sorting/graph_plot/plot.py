@@ -40,6 +40,9 @@ t_SS_complex_firstname = np.array([[34, 81, 6420, 547907, 5.20697e7], [18, 75, 6
 t_SS_complex_ID = np.array([[13, 31, 1327, 106553, 1.60433e7], [13, 23, 1150, 137457, 1.41425e7], 
 							[9, 21, 882, 108421, 1.41116e7], [12, 28, 1019, 115381, 1.62056e7]])
 
+t_SS_complex_firstname_sch = np.array([[39, 473, 28822, 3.19256e6, 3.59856e8], [22, 400, 27385, 2.71432e6, 2.91682e8], 
+								       [23, 346, 29663, 2.99206e6, 3.00498e8], [32, 280, 28524, 2.84871e6, 2.96806e8]])
+
 t_IS_int = np.array([[17, 36, 3054, 162459, 1.73707e7], [17, 17, 53, 149, 1175],
 					 [16, 58, 3915, 312440, 3.4378e7], [28, 32, 451, 30674, 3.19244e6]])
 
@@ -51,6 +54,9 @@ t_IS_complex_firstname = np.array([[52, 68, 4081, 405407, 3.32375e7], [24, 24, 5
 
 t_IS_complex_ID = np.array([[25, 45, 1734, 156201, 1.54527e7], [14, 14, 23, 111, 1139],
 							[15, 44, 2455, 264103, 3.35932e7], [38, 28, 518, 42380, 3.11602e6]])
+
+t_IS_complex_firstname_sch = np.array([[30, 284, 19990, 1.90129e6, 2.42986e8], [24, 38, 238, 1166, 6798], 
+								       [27, 454, 29204, 3.17222e6, 3.63329e8], [38, 75, 3225, 329503, 3.52122e7]])
 
 t_BS_int = np.array([[18, 72, 5782, 535801, 6.10171e7], [17, 35, 1193, 107270, 9.27655e6], 
 					 [19, 136, 8992, 727372, 7.61722e7], [12, 42, 2586, 180253, 1.80812e7]])
@@ -64,6 +70,9 @@ t_BS_complex_firstname = np.array([[14, 150, 10893, 1.13653e6, 1.02553e8], [12, 
 t_BS_complex_ID = np.array([[22, 61, 4468, 442764, 5.45434e7], [12, 21, 909, 83051, 1.37438e7], 
 							[12, 78, 6950, 590514, 6.8553e7], [15, 56, 1677, 161558, 2.15969e7]])
 
+t_BS_complex_firstname_sch = np.array([[27, 432, 43109, 4.57632e6, 4.40493e8], [32, 356, 33505, 3.52993e6, 2.97675e8], 
+								       [43, 387, 32627, 3.38832e6, 3.58876e8], [33, 407, 34613, 3.21803e6, 3.44655e8]])
+
 t_HS_int = np.array([[27, 97, 1699, 20075, 291515], [33, 106, 2324, 31416, 342507], 
 					 [21, 153, 2106, 25792, 309319], [35, 102, 1345, 23191, 249108]])
 
@@ -76,6 +85,8 @@ t_HS_complex_firstname = np.array([[24, 108, 1574, 24496, 298772], [36, 208, 267
 t_HS_complex_ID = np.array([[32, 142, 1807, 28980, 240889], [28, 156, 2134, 30386, 375888], 
 							[31, 146, 1770, 24040, 242120], [20, 154, 1698, 26760, 256647]])
 
+t_HS_complex_firstname_sch = np.array([[31, 183, 2213, 32291, 435843], [26, 163, 4043, 51471, 408593], 
+								       [32, 140, 3359, 32832, 588542], [35, 247, 3565, 43498, 585321]])
 
 t_QS_int = np.array([[0, 0, 0, 10000, 50000], [0, 0, 10000, 770000, 5.516e7], 
 					 [0, 0, 10000, 550000, 3.552e7], [0, 0, 0, 10000, 50000]])
@@ -161,10 +172,31 @@ QS_complex_firstname_decreasing = PlotMethod2D(input_size, t_QS_complex_firstnam
 
 SS_complex_firstname_semi = PlotMethod2D(input_size, t_SS_complex_firstname[3])
 IS_complex_firstname_semi = PlotMethod2D(input_size, t_IS_complex_firstname[3])
-BS_complex_firstname_smei = PlotMethod2D(input_size, t_BS_complex_firstname[3])
-HS_complex_firstname_smei = PlotMethod2D(input_size, t_HS_complex_firstname[3])
-QS_complex_firstname_smei = PlotMethod2D(input_size, t_QS_complex_firstname[3])
+BS_complex_firstname_semi = PlotMethod2D(input_size, t_BS_complex_firstname[3])
+HS_complex_firstname_semi = PlotMethod2D(input_size, t_HS_complex_firstname[3])
+QS_complex_firstname_semi = PlotMethod2D(input_size, t_QS_complex_firstname[3])
 
+
+# complex firstname Sch
+SS_complex_firstname_random_sch = PlotMethod2D(input_size, t_SS_complex_firstname_sch[0])
+IS_complex_firstname_random_sch = PlotMethod2D(input_size, t_IS_complex_firstname_sch[0])
+BS_complex_firstname_random_sch = PlotMethod2D(input_size, t_BS_complex_firstname_sch[0])
+HS_complex_firstname_random_sch = PlotMethod2D(input_size, t_HS_complex_firstname_sch[0])
+
+SS_complex_firstname_increasing_sch = PlotMethod2D(input_size, t_SS_complex_firstname_sch[1])
+IS_complex_firstname_increasing_sch = PlotMethod2D(input_size, t_IS_complex_firstname_sch[1])
+BS_complex_firstname_increasing_sch = PlotMethod2D(input_size, t_BS_complex_firstname_sch[1])
+HS_complex_firstname_increasing_sch = PlotMethod2D(input_size, t_HS_complex_firstname_sch[1])
+
+SS_complex_firstname_decreasing_sch = PlotMethod2D(input_size, t_SS_complex_firstname_sch[2])
+IS_complex_firstname_decreasing_sch = PlotMethod2D(input_size, t_IS_complex_firstname_sch[2])
+BS_complex_firstname_decreasing_sch = PlotMethod2D(input_size, t_BS_complex_firstname_sch[2])
+HS_complex_firstname_decreasing_sch = PlotMethod2D(input_size, t_HS_complex_firstname_sch[2])
+
+SS_complex_firstname_semi_sch = PlotMethod2D(input_size, t_SS_complex_firstname_sch[3])
+IS_complex_firstname_semi_sch = PlotMethod2D(input_size, t_IS_complex_firstname_sch[3])
+BS_complex_firstname_semi_sch = PlotMethod2D(input_size, t_BS_complex_firstname_sch[3])
+HS_complex_firstname_semi_sch = PlotMethod2D(input_size, t_HS_complex_firstname_sch[3])
 
 # complex ID
 SS_complex_ID_random = PlotMethod2D(input_size, t_SS_complex_ID[0])
@@ -277,10 +309,28 @@ HS_complex_firstname_random.plot2D(title="Size of Value Set v.s. Execution time 
 
 
 
+# Schwartzian transform
+# SS
+SS_complex_firstname_random_sch.plot2D(show=False, xscale="log", yscale="log", figsize=(10, 8))
+SS_complex_firstname_random.plot2D(title="With Schwarztian Transform v.s. Without Schwarztian Transform (Selection Sort, FirstName)", xlabel="Size (log scale)", ylabel="Time [$\mu$s] (log scale)", 
+									   show=True, legend=["With", "Without", "self-defined (including 4 attributes)\n [sorted by string]"], xscale="log", yscale="log", 
+									   canvas=False, savename="With Schwarztian Transform v.s. Without Schwarztian Transform (Selection Sort, FirstName).png")
 
 
+IS_complex_firstname_random_sch.plot2D(show=False, xscale="log", yscale="log", figsize=(10, 8))
+IS_complex_firstname_random.plot2D(title="With Schwarztian Transform v.s. Without Schwarztian Transform (Insertion Sort, FirstName)", xlabel="Size (log scale)", ylabel="Time [$\mu$s] (log scale)", 
+									   show=True, legend=["With", "Without", "self-defined (including 4 attributes)\n [sorted by string]"], xscale="log", yscale="log", 
+									   canvas=False, savename="With Schwarztian Transform v.s. Without Schwarztian Transform (Insertion Sort, FirstName).png")
 
+BS_complex_firstname_random_sch.plot2D(show=False, xscale="log", yscale="log", figsize=(10, 8))
+BS_complex_firstname_random.plot2D(title="With Schwarztian Transform v.s. Without Schwarztian Transform (Bubble Sort, FirstName)", xlabel="Size (log scale)", ylabel="Time [$\mu$s] (log scale)", 
+									   show=True, legend=["With", "Without", "self-defined (including 4 attributes)\n [sorted by string]"], xscale="log", yscale="log", 
+									   canvas=False, savename="With Schwarztian Transform v.s. Without Schwarztian Transform (Bubble Sort, FirstName).png")
 
+BS_complex_firstname_random_sch.plot2D(show=False, xscale="log", yscale="log", figsize=(10, 8))
+BS_complex_firstname_random.plot2D(title="With Schwarztian Transform v.s. Without Schwarztian Transform (Heap Sort, FirstName)", xlabel="Size (log scale)", ylabel="Time [$\mu$s] (log scale)", 
+									   show=True, legend=["With", "Without", "self-defined (including 4 attributes)\n [sorted by string]"], xscale="log", yscale="log", 
+									   canvas=False, savename="With Schwarztian Transform v.s. Without Schwarztian Transform (Heap Sort, FirstName).png")
 
 
 
