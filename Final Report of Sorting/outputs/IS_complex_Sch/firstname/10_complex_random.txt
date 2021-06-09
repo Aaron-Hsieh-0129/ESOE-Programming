@@ -1,0 +1,11 @@
+     ID      FirstName          LastName     Score
+ 5642109           Abner       Andalucia        90
+ 1900786          Eliott          Melyna        99
+ 8294379        Francois        Kassidee        37
+ 5572535            Milo         Brennin        57
+ 2619963           Myron           Osiel        32
+ 2092152           Niall         Tarahji         0
+ 2789171         Obadiah            Ruah        21
+ 1650343          Scotti            Hunt         8
+ 6556037           Timmy        Nicholus        76
+ 5788353         Wilfred          Austen        82
